@@ -90,7 +90,7 @@
             color: #28a745 !important;
         }
 
-        /* INITIATIVES SECTION */
+        /* INITIATIVES SECTION
         .initiatives-section {
             background-color: #fff;
             padding: 60px 0;
@@ -121,7 +121,7 @@
         }
 
         /* RIGHT IMAGE OVERLAY */
-        .initiative-image-wrapper {
+        /* .initiative-image-wrapper {
             display: flex;
             align-items: stretch;
         }
@@ -151,8 +151,102 @@
         }
 
         .overlay-text h1 {
-            /* font-size: clamp(2rem, 3vw + 0.5rem, 2.5rem); */
+     
             font-weight: bold;
+        } */
+        .initiatives-section {
+            padding: 4rem 2rem;
+            background-color: #cedcbc2e;
+            margin: 0 auto;
+            width: 100%;
+            border-left: 5px solid #e2e7cf;
+
+        }
+
+        .initiative-box {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #8bc34a15;
+            height: 100%;
+        }
+
+        .initiative-box:hover {
+            box-shadow: 0 0 12px #8bc34a66;
+            /* soft green glow */
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+
+        .initiative-box h5 {
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .initiative-box p {
+            /* font-size: 0.95rem; */
+            color: #333;
+        }
+
+        .read-more-link {
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid black;
+        }
+
+        .read-more-link:hover {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .image-overlay-container {
+            position: relative;
+            height: 100%;
+        }
+
+        .image-overlay-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            right: 5%;
+            color: #f0f0f0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            max-width: 90%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+        }
+
+        .overlay-text h1 {
+            /* font-size: 2.5rem; */
+            /* font-size: clamp(1.8rem, 4vw, 2.5rem); */
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+        }
+
+        .overlay-text p {
+            /* font-size: 1rem; */
+            /* font-size: clamp(0.9rem, 1.2vw, 1rem); */
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        /* Optional: icon spacing */
+        .initiative-box i {
+            /* font-size: 1.8rem; */
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            color: #3a7e3b;
         }
 
         /* .overlay-text p {
@@ -175,7 +269,7 @@
 
         /* UTILITIES */
         .custom-container {
-            max-width: 80%;
+            max-width: 95%;
             margin: 0 auto;
         }
 
@@ -198,14 +292,14 @@
     <header class="main-header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand text-success" href="../index.html">YESACTION</a>
+                <a class="navbar-brand text-success" href="/index.html">YESACTION</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link active" href="initiatives.html">Initiatives</a></li>
                         <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
@@ -401,7 +495,6 @@
         });
     </script>
 </body>
-
 
 
 

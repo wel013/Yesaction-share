@@ -24,7 +24,7 @@ body {
 
 /* Headings */
 h1 {
-    font-size: clamp(3rem, 5vw, 4rem);
+    font-size: clamp(3rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -704,4 +704,5 @@ footer {
     margin: 2rem auto;
     z-index: 0;
 }
+
 

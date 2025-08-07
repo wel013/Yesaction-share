@@ -24,7 +24,7 @@ body {
 
 /* Headings */
 h1 {
-    font-size: clamp(3rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -459,32 +459,6 @@ footer {
 
 @media (max-width: 576px) {
 
-    /* .image-overlay-container {
-        position: relative;
-        height: auto !important;
-        max-height: none !important;
-    }
-
-    .image-overlay-container img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
-        border-radius: 10px;
-        display: block;
-    }
-
-    .overlay-text {
-        position: relative !important;
-        width: 100% !important;
-        max-height: none !important;
-        height: auto !important;
-        background-color: rgba(0, 0, 0, 0.6) !important;
-        padding: 15px !important;
-        overflow: visible !important;
-        box-sizing: border-box;
-        border-radius: 12px;
-        margin-top: 10px;
-    } */
     .overlay-text {
         background-color: transparent;
         /* Remove shadow */
@@ -502,15 +476,11 @@ footer {
 
     .hero-text h1 {
         color: #fefdfd;
-        /* font-size: 2.2rem; */
-        /* text-shadow:
-            1px 1px 3px rgba(0, 0, 0, 1),
-            0 4px 8px rgba(0, 0, 0, 0.4); */
+
     }
 
     .hero-text p {
-        /* font-size: 1rem; */
-        /* background-color: rgba(255, 255, 255, 0.2); */
+
         color: #fff;
     }
 
@@ -521,21 +491,29 @@ footer {
         left: 5%;
         right: 5%;
         padding: 0.75rem 1rem;
-        /* font-size: 0.85rem; */
     }
 
+
     .stats-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: center;
         gap: 1rem;
     }
 
+    .stat-item {
+        flex: 1;
+        text-align: center;
+        min-width: 80px;
+    }
+
     .stat-item h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .stat-item p {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     /* .overlay-text h1 {
@@ -546,6 +524,13 @@ footer {
         font-size: 0.8rem;
     }
 } */
+    .vision-section .row {
+        width: 100%;
+        /* max-width: 1200px; */
+        /* Or 1000px, depending on how wide you want it */
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
 
 }
@@ -560,6 +545,7 @@ footer {
         display: none;
         /* hide paragraph text */
     }
+
     .hero-text {
         /* background-color: rgba(0, 0, 0, 0.4); */
         padding: 1rem;
@@ -704,5 +690,3 @@ footer {
     margin: 2rem auto;
     z-index: 0;
 }
-
-

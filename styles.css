@@ -551,6 +551,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .overlay-text {
+        background-color: transparent;
+        /* Remove shadow */
+    }
+
+    .overlay-text p {
+        display: none;
+        /* hide paragraph text */
+    }
     .hero-text {
         /* background-color: rgba(0, 0, 0, 0.4); */
         padding: 1rem;
@@ -695,3 +704,4 @@ footer {
     margin: 2rem auto;
     z-index: 0;
 }
+

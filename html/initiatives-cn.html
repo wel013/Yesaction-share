@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YESAction Initiatives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* NAVBAR */
+        nav.navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            backdrop-filter: blur(1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* TYPOGRAPHY + GLOBAL */
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: clamp(1rem, 1vw + 0.2rem, 1.125rem);
+            line-height: 1.7;
+            padding-top: 50px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 2.5vw + 0.3rem, 2.5rem);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 2vw + 0.25rem, 2rem);
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, 1.5vw + 0.25rem, 1.75rem);
+        }
+
+        h5 {
+            font-size: clamp(1.1rem, 1.2vw + 0.2rem, 1.5rem);
+            font-weight: 600;
+        }
+
+        h6 {
+            font-size: clamp(1rem, 1vw + 0.2rem, 1.25rem);
+        }
+
+        p {
+            font-size: clamp(1rem, 1vw + 0.1rem, 1.125rem);
+            font-weight: 300;
+        }
+
+        a {
+            color: #198754;
+            text-decoration: none;
+            font-size: clamp(0.95rem, 1vw + 0.1rem, 1.05rem);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: clamp(1.2rem, 2vw + 0.2rem, 1.6rem);
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            color: #28a745 !important;
+        }
+
+        /* INITIATIVES SECTION */
+        .initiatives-section {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .initiatives-section .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .initiative-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .initiative-box:hover {
+            background-color: #e9f5ee;
+        }
+
+        .initiative-box i {
+            /* font-size: clamp(1.5rem, 2vw, 2rem); */
+            color: #198754;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* RIGHT IMAGE OVERLAY */
+        .initiative-image-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .image-overlay-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-overlay-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .overlay-text h1 {
+            /* font-size: clamp(2rem, 3vw + 0.5rem, 2.5rem); */
+            font-weight: bold;
+        }
+
+        /* .overlay-text p {
+            font-size: clamp(1rem, 1vw + 0.1rem, 1.2rem);
+        } */
+
+        /* CONTACT SECTION */
+        /* .contact-section h2 {
+            font-size: clamp(1.8rem, 2.5vw + 0.3rem, 2.5rem);
+        } */
+
+        /* FOOTER */
+        footer {
+            background-color: #353535;
+            padding: 2rem;
+            text-align: center;
+            /* font-size: clamp(0.8rem, 1vw, 0.95rem); */
+            color: #666;
+        }
+
+        /* UTILITIES */
+        .custom-container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVE OVERRIDES */
+        @media (max-width: 768px) {
+            .overlay-text h1 {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .overlay-text p {
+                font-size: clamp(0.9rem, 3vw, 1.05rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success" href="/index-cn.html">YESACTION</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index-cn.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about-cn.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="initiatives-cn.html">Initiatives</a></li>
+                        <li class="nav-item"><a class="nav-link" href="join-cn.html">Join Us</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="initiatives-cn.html" id="languageDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">中文</a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="initiatives.html">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Initiatives Section -->
+    <section class="initiatives-section">
+        <!-- <div class="container"> -->
+        <div class="custom-container mx-auto">
+
+            <div class="row align-items-stretch">
+
+                <!-- Text Grid -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Single Initiative -->
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-droplet"></i>
+                                <h5>中文YESWater</h5>
+                                <p>Free and affordable public water fountains are available in our schools... awareness
+                                    campaigns, water quality testing, and more.</p>
+                                <a href="yeswater.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-book"></i>
+                                <h5>YESEducation</h5>
+                                <p>Before advocacy and change, people need to first understand the situation... the path
+                                    of sustainability.</p>
+                                <a href="yeseducation.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-box"></i>
+                                <h5>YESHabits</h5>
+                                <p>Sustainability, though noble in intent, can often feel overwhelming to start... make
+                                    a big difference!</p>
+                                <a href="yeshabits.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-flower2"></i>
+                                <h5>YESHorticulture</h5>
+                                <p>Choosing local produce isn’t just about reducing carbon footprint—it’s also about
+                                    relishing the experience!</p>
+                                <a href="yeshorticulture.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-egg-fried"></i>
+                                <h5>YESCooking</h5>
+                                <p>Rekindle the joy of home cooking: a path to health, savings, and sustainability...
+                                    guiding students in creating nutritious dishes.</p>
+                                <a href="yescooking.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="initiative-box">
+                                <i class="bi bi-people"></i>
+                                <h5>YESOutreach</h5>
+                                <p>Your voice amplifies our mission! Local YESAction chapters showcase values at school
+                                    events and community gatherings.</p>
+                                <a href="yesoutreach.html" class="read-more-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image Column -->
+                <div class="col-md-4 initiative-image-wrapper">
+                    <div class="image-overlay-container">
+                        <img src="../images/BingWallpaper.jpg" alt="Initiatives Cover" class="img-fluid" />
+                        <div class="overlay-text">
+                            <h1>Initiatives</h1>
+                            <p>The main objective of being a YESAction chapter is to make a meaningful impact at the
+                                local level...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section py-5" style="background-color: #e2e7cf;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image -->
+                <div class="col-md-6 text-center mb-4 mb-md-0 d-none d-md-block">
+
+                    <img src="../images/contact-image.jpg" alt="Contact YESAction" class="img-fluid rounded" />
+                </div>
+
+                <!-- Form -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">Ready to <em>Connect?</em></h2>
+                    <form id="contact-form">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name" name="FirstName"
+                                    required />
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" name="LastName"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email *" name="Email" required />
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject *" name="Subject" required />
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message *" name="Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark px-4 py-2 rounded-pill">Let's Talk</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Copyright -->
+                <div class="col-md-6 mb-3 mb-md-0 d-flex align-items-center">
+                    <img src="../images/yesaction-logo.png" alt="YESAction Logo"
+                        style="max-width: 80px; margin-right: 1rem;" />
+                    <div>
+                        <p class="mb-0">©2022 by <span style="color:#8fcf53;">YESAction</span>, Inc. All Rights
+                            Reserved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">Email: info@mysite.com</p>
+                    <p class="mb-1">Tel: 123-456-7890</p>
+                    <p class="mb-0 fw-bold">500 Terry Francois St, San Francisco, CA 94158</p>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <!-- Updated HTML -->
+            <div class="social-icons d-flex justify-content-center gap-3 mt-4">
+                <a href="https://www.instagram.com/yesactionmain?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">
+                    <img src="../images/instagram.svg" alt="Instagram" style="width: 24px;" />
+                </a>
+                <a href="https://www.facebook.com/people/YESAction/100092869676090/" target="_blank">
+                    <img src="../images/facebook.svg" alt="Facebook" style="width: 24px;" />
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/contact-form.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector("nav.navbar");
+            if (window.scrollY > 10) {
+                navbar.classList.add("bg-white", "shadow-sm");
+            } else {
+                navbar.classList.remove("bg-white", "shadow-sm");
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>

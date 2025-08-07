@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YESOutreach | YESACTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+        nav.navbar {
+            /* position: relative; */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background-color: transparent !important;
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            /* Soft white background */
+            backdrop-filter: blur(1px);
+            /* Optional: modern frosted-glass effect */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            /* Slight shadow for separation */
+            border-radius: 0 0 5px 5px;
+            /* Rounded bottom for polish */
+        }
+
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            font-size: clamp(1rem, 1vw + 0.2rem, 1.125rem);
+            /* ~16px to ~18px */
+            color: #333;
+            padding-top: 80px;
+            margin: 0;
+
+        }
+
+        /* Headings */
+        h1 {
+            font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
+            font-weight: 500;
+        }
+
+        h5 {
+            font-size: clamp(1rem, 1.2vw + 0.4rem, 1.25rem);
+            font-weight: 500;
+        }
+
+        h6 {
+            font-size: clamp(0.95rem, 1vw + 0.3rem, 1.1rem);
+            font-weight: 500;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: inherit;
+            margin-bottom: 1rem;
+        }
+
+        /* Small text */
+        small,
+        .text-small {
+            font-size: clamp(0.8rem, 0.8vw + 0.2rem, 0.9rem);
+        }
+
+        .outreach-hero {
+            background-image: url('../images/outreach-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            min-height: 90vh;
+            /* 90% of viewport height */
+            padding: 4rem 2rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .outreach-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .outreach-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            text-align: left;
+            padding-top: 10rem;
+        }
+
+        .outreach-hero h1 {
+            /* font-size: 3rem; */
+            font-weight: 700;
+        }
+
+        .outreach-hero h2 {
+            /* font-size: 1.25rem; */
+            font-weight: 400;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .section h3 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #353535;
+            padding: 2rem;
+            text-align: center;
+            /* font-size: 0.9rem; */
+            /* font-size: clamp(0.8rem, 1vw, 0.95rem); */
+
+            color: #666;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-success" href="/index.html">YESACTION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="initiatives.html">Initiatives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="yesoutreach.html" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">English</a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="yesoutreach-cn.html">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="outreach-hero">
+        <div class="container">
+
+            <div class="outreach-hero-content text-white">
+                <h1><span class="text-primary">YES</span><strong>Outreach</strong></h1>
+                <h2>Join Our Grassroots Movement for a Greener Tomorrow!</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Introduction -->
+    <section class="section bg-light">
+        <div class="container">
+            <h3>Introduction to <span class="highlight">YESOutreach</span></h3>
+            <p>
+                First and foremost, it is an endeavor that aims to be engaging and enjoyable. Students are encouraged to
+                actively
+                participate in their local communities by hosting interesting booths, organizing memorable events, and
+                making tangible
+                public contributions. However, the benefits extend beyond community involvement.
+                While not necessarily difficult, this initiative promises to equip students with essential life skills.
+                Participants will have the opportunity to develop their public speaking abilities and enhance their
+                presentation
+                techniques, resulting in a comprehensive learning experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: Objectives -->
+    <section class="section">
+        <div class="container">
+            <h3><span class="highlight">YESOutreach’s Objectives</span></h3>
+            <p>
+                We aim to raise awareness about the importance of sustainability, especially among the dynamic youth
+                sector,
+                and ensure that they align with the principles of YESAction.
+                We strive to make our presence known and our mission beyond the local chapter by representing YESAction
+                at youth events
+                throughout the nation.
+                We continuously seek to expand our network by recruiting new chapters and fostering meaningful, lasting
+                connections
+                in order to increase our impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: Next Event -->
+    <section class="section bg-light">
+        <div class="container">
+            <h3><span class="highlight">YESOutreach’s Next Event</span></h3>
+            <p>
+                Shifting the spotlight to the national stage, October promises to be a pivotal month for YESOutreach.
+                We’re excited to participate in the Oregon SciFest!
+                This event attracts a diverse range of students and organizations from across the country.
+                One of the highlights will be Seerene’s insightful lecture on sustainability.
+                In addition, I will be managing a specially curated booth where students can participate in an
+                interactive Jeopardy activity.
+                It’s more than just fun and games; it’s a golden opportunity to amplify the message of YESAction.
+            </p>
+            <p>
+                Now, it’s your turn. Take a moment to reflect and ask yourself: which events are calling to you in the
+                foreseeable future?
+                Remember, there are countless opportunities on the horizon just waiting to be taken.
+                Whether it’s networking or making a tangible impact, the world is full of possibilities.
+                So, step out, make your voice heard, and unleash the vast potential within you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5" style="background-color: #e2e7cf;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image -->
+                <div class="col-md-6 text-center mb-4 mb-md-0 d-none d-md-block">
+
+                    <img src="../images/contact-image.jpg" alt="Contact YESAction" class="img-fluid rounded" />
+                </div>
+
+                <!-- Form -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">Ready to <em>Connect?</em></h2>
+                    <form id="contact-form">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name" name="FirstName"
+                                    required />
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" name="LastName"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email *" name="Email" required />
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject *" name="Subject" required />
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message *" name="Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark px-4 py-2 rounded-pill">Let's Talk</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Copyright -->
+                <div class="col-md-6 mb-3 mb-md-0 d-flex align-items-center">
+                    <img src="../images/yesaction-logo.png" alt="YESAction Logo"
+                        style="max-width: 80px; margin-right: 1rem;" />
+                    <div>
+                        <p class="mb-0">©2022 by <span style="color:#8fcf53;">YESAction</span>, Inc. All Rights
+                            Reserved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">Email: info@mysite.com</p>
+                    <p class="mb-1">Tel: 123-456-7890</p>
+                    <p class="mb-0 fw-bold">500 Terry Francois St, San Francisco, CA 94158</p>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <!-- Updated HTML -->
+            <div class="social-icons d-flex justify-content-center gap-3 mt-4">
+                <a href="https://www.instagram.com/yesactionmain?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">
+                    <img src="../images/instagram.svg" alt="Instagram" style="width: 24px;" />
+                </a>
+                <a href="https://www.facebook.com/people/YESAction/100092869676090/" target="_blank">
+                    <img src="../images/facebook.svg" alt="Facebook" style="width: 24px;" />
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/contact-form.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector("nav.navbar");
+            if (window.scrollY > 10) {
+                navbar.classList.add("bg-white", "shadow-sm");
+            } else {
+                navbar.classList.remove("bg-white", "shadow-sm");
+            }
+        });
+    </script>
+</body>
+
+</html>

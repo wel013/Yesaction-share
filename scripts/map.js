@@ -327,7 +327,7 @@ const locations = [
         name: "贝塞斯国际学校",
         lat: 23.048219,
         lng: 114.352957,
-        url: "https://www.basischina.com/#/"
+        url: "none"
     }
 
 

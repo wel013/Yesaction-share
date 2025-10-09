@@ -322,7 +322,15 @@ const locations = [
         lat: 41.5274644962513,
         lng: -73.1234205045659,
         url: "https://www.westoverschool.org/"
+    },
+    {
+        name: "贝塞斯国际学校",
+        lat: 23.048219,
+        lng: 114.352957,
+        url: "https://www.basischina.com/#/"
     }
+
+
 ];
 
 // map.js

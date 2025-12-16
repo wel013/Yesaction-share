@@ -339,6 +339,135 @@
             /* font-size: 0.9rem; */
             color: #666;
         }
+
+        /* Team Section Styles */
+        .team-section {
+            padding: 5rem 0;
+        }
+
+        .team-section h2 {
+            color: #4b752a;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-section .lead {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .circular-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #e2e7cf;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .circular-img:hover {
+            transform: scale(1.05);
+        }
+
+        .circular-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            border-top: 4px solid #8fcf53;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-info h4 {
+            color: #333;
+            font-size: 1.3rem;
+        }
+
+        .team-info h5 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .team-description p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Equal height columns */
+        .team-member {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1200px) {
+            .team-info {
+                min-height: 340px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .circular-img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .team-info {
+                min-height: 320px;
+            }
+
+            .team-info h4 {
+                font-size: 1.2rem;
+            }
+
+            .team-info h5 {
+                font-size: 0.9rem;
+            }
+
+            .team-description p {
+                font-size: 0.82rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .circular-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .team-info {
+                min-height: 300px;
+            }
+
+            .team-description p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .circular-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .team-info {
+                min-height: 280px;
+            }
+        }
     </style>
 </head>
 
@@ -356,6 +485,8 @@
                     <li class="nav-item"><a class="nav-link" href="/index-en.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about-en.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="initiatives-en.html">Initiatives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news-en.html">News</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="join-en.html">Join Us</a></li>
 
                     <li class="nav-item dropdown">
@@ -421,58 +552,128 @@
             </div>
         </div>
     </section>
-    <!-- <div class="timeline-container">
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2020–2021</div>
-                <p>This period was characterized by in-depth research, campaign conversations, and the establishment of
-                    our base structures. Forming our inaugural initiative, we began an awareness drive encouraging
-                    sustainable living practices. By 2021, YESAction had its first 10 chapters nationwide.</p>
+    <!-- Team Section -->
+    <section class="team-section py-5" style="background-color: #f9faf5;">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold">Our Team</h2>
+                    <p class="lead">Meet the dedicated individuals driving our mission forward</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Team Member 1 - Alfred -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="/images/team-alfred.jpg" alt="Alfred" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Alfred Li</h4>
+                                <h5 class="text-success mb-2">Founder & Executive Director, YESAction China</h5>
+                                <h5 class="text-success mb-2">Alfred@yesaction.org</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Alfred is the Founder and Executive Director of YESAction China. His commitment to
+                                    environmental sustainability stems from hands-on experiences with nature and
+                                    communities, including wetland research and community service projects. A long-time
+                                    hiking enthusiast, he has developed a deep appreciation for the value of natural
+                                    ecosystems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 - Pranav (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Pranav&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Pranav Tholeti" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Pranav Tholeti</h4>
+                                <h5 class="text-success mb-2">Executive Director</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Pranav is the National Initiative Director for YES Education and a team member at
+                                    YES
+                                    Action's social media division. Attending high school in New Jersey, he founded his
+                                    school's environmental club and leads a local YESAction chapter, promoting
+                                    sustainability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 - Keely (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Keely&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Keely Aguilar" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Keely Aguilar</h4>
+                                <h5 class="text-success mb-2">Executive Assistant</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Keely, the Executive Assistant of YESAction's National Team and a freshman chapter
+                                    leader, passionately champions sustainable policies. Collaborating with local firms
+                                    to
+                                    elevate environmental standards, she conducts advanced research aimed at forging a
+                                    sustainable future.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 - Iryna (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Iryna&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Iryna Levada" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Iryna Levada</h4>
+                                <h5 class="text-success mb-2">Director of Business Development</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Iryna, the Director of Business Development for YESAction and a senior at Altoona
+                                    High
+                                    School in WI, also leads the local YESAction chapter. As an exchange student from
+                                    Ukraine, she passionately shares her nation's heritage and culture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more team members here as needed -->
             </div>
         </div>
-
-        <div class="timeline-event right">
-            <div class="content">
-                <div class="timeline-year">2021–2022</div>
-                <p>During the foundational year, as the world grappled with the pandemic, a profound realization took
-                    root. Choosing the collective efforts in China to combat the crisis, the birth of YESAction was
-                    marked in September 2021, and our first chapter was officially established.</p>
-            </div>
-        </div>
-
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2021–2022</div>
-                <p>Our efforts gained significant traction, resulting in the expansion of our chapter network to over
-                    18. With an aim to address diverse global issues, initiatives like “YESClimate,” “YESOcean,” and
-                    “YESWaste” were launched and implemented.</p>
-            </div>
-        </div>
-
-        <div class="timeline-event right">
-            <div class="content">
-                <div class="timeline-year">2023–Present</div>
-                <p>Our journey took an upward trajectory, with our network stretching to over 70 chapters globally. New
-                    initiatives including YESCooking, which promotes sustainable kitchens via culinary practices, were
-                    introduced. With a continuous wave of innovation, we remain committed to creating and launching even
-                    more impactful initiatives.</p>
-            </div>
-        </div>
-
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2025: Expanding into China</div>
-                <p>
-                    We established YESAction China, a significant initiative bringing our program closer to local
-                    communities. The China
-                    chapter is dedicated to advancing youth engagement, sustainable innovation, and cross-cultural
-                    collaboration,
-                    collectively realizing YESAction's global vision.
-                </p>
-            </div>
-        </div>
-    </div> -->
-
+    </section>
 
 
     <!-- -----------------------------if you see this stop ctrl z--------------------------------- -->

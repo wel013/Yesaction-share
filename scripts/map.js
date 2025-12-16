@@ -328,6 +328,12 @@ const locations = [
         lat: 23.048219,
         lng: 114.352957,
         url: ""
+    },
+    {
+        name: "贝塞斯国际学校",
+        lng: 121.53,
+        lat: 29.88,
+        url: ""
     }
 
 ];
@@ -335,7 +341,7 @@ const locations = [
 // map.js
 
 // Initialize map
-const map = L.map('map').setView([39.8283, -98.5795], 4); // Center on USA
+const map = L.map('map').setView([29.88, 121.53], 4); // Center on USA
 
 // Add OpenStreetMap tiles
 // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

@@ -10,61 +10,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <style>
-        /* Responsive Base Typography */
-        html {
-            font-size: 16px;
-        }
-
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            font-size: clamp(1rem, 1vw + 0.2rem, 1.125rem);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fff;
-            padding-top: 50px;
-        }
-
-
-
-
-        /* Headings */
-        h1 {
-            font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
-            /* ~32px–48px */
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: clamp(1.75rem, 2.5vw + 0.3rem, 2.5rem);
-            /* ~28px–40px */
-            font-weight: 600;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 2vw + 0.25rem, 2rem);
-        }
-
-        h4 {
-            font-size: clamp(1.25rem, 1.5vw + 0.25rem, 1.75rem);
-        }
-
-        h5 {
-            font-size: clamp(1.1rem, 1.2vw + 0.2rem, 1.5rem);
-        }
-
-        h6 {
-            font-size: clamp(1rem, 1vw + 0.2rem, 1.25rem);
-        }
-
-        p {
-            font-size: clamp(1rem, 1vw + 0.1rem, 1.125rem);
-            /* Keeps paragraph text responsive too */
-            font-weight: 300;
-        }
-
-
         nav.navbar {
             /* position: relative; */
             position: fixed;
@@ -95,23 +40,25 @@
             color: #28a745 !important;
         }
 
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+            padding-top: 50px;
+            font-size: clamp(1rem, 1vw + 0.2rem, 1.125rem);
+        }
+
         /* Container for top image + story text */
         .top-section {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            /* centers content horizontally */
-            align-items: stretch;
+            padding: 2rem 4rem;
             gap: 2rem;
-            padding: 2rem 0;
-            width: 70%;
-            margin: 0 auto;
-            max-width: none;
-            /* remove if you want full 80% effect */
+            align-items: stretch;
+            max-width: 1200px;
+            margin: auto;
         }
-
-
-
 
         .story-image {
             flex: 1;
@@ -153,28 +100,49 @@
             max-width: 900px;
             margin: 3rem auto 6rem;
             position: relative;
-            padding: 0 2rem;
+            padding: 0 0.5rem;
         }
 
         /* Vertical line in center */
         .timeline-container::before {
+            /* content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                background-color: #6c9e3f;
+                transform: translateX(-50%);
+                z-index: 1;
+                border-radius: 2px; */
             content: '';
             position: absolute;
-            left: 50%;
+            left: 120px;
             top: 0;
             bottom: 0;
-            width: 4px;
+            width: 2px;
             background-color: #6c9e3f;
-            transform: translateX(-50%);
             z-index: 1;
-            border-radius: 2px;
+        }
+
+        .timeline-image {
+            flex: 0 0 120px;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
         }
 
         .timeline-event {
             position: relative;
-            width: 100%;
+            /* width: 100%; */
             display: flex;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
             z-index: 2;
         }
 
@@ -240,14 +208,34 @@
 
 
         .timeline-year {
-            font-weight: 600;
+            /* font-weight: 600;
+                color: #4b752a;
+                margin-bottom: 0.75rem;
+                padding: 0.5rem 1rem;
+                /* font-size: 1.1rem; */
+            /* display: inline-block; */
+            flex: 0 0 120px;
+            font-weight: 700;
+            font-size: 1.5rem;
             color: #4b752a;
-            margin-bottom: 0.75rem;
-            padding: 0.5rem 1rem;
-            /* font-size: 1.1rem; */
-            display: inline-block;
+            text-align: center;
+            padding-right: 50px;
+            position: relative;
         }
 
+        /* .timeline-year::after {
+                content: '';
+                position: absolute;
+                right: -10px;
+                top: 10px;
+                width: 16px;
+                height: 16px;
+                background-color: #6c9e3f;
+                border-radius: 50%;
+                border: 3px solid white;
+                box-shadow: 0 0 0 2px #6c9e3f;
+                z-index: 3;
+            } */
 
         .timeline-event p {
             margin: 0;
@@ -263,9 +251,7 @@
         @media (max-width: 768px) {
             .top-section {
                 flex-direction: column;
-                padding: 1.5rem;
-                width: 90%;
-                /* A little wider on smaller screens */
+                padding: 1.5rem 2rem;
             }
 
             .story-image {
@@ -273,47 +259,78 @@
                 width: 100%;
             }
 
-            .timeline-container::before {
-                /* left: 10;
-                width: 3px; */
-                display: none;
-            }
-
-            .timeline-event {
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: flex-start;
-                margin-bottom: 2rem;
-                padding-left: 20px;
-                /* offset to match the line */
-            }
-
-            .timeline-event.left,
-            .timeline-event.right {
-                justify-content: flex-start !important;
-            }
-
-            .timeline-event .content {
-                max-width: 100% !important;
-                background: #d2d8a7cc;
-                padding: 1.2rem 1.5rem;
-                margin: 0;
-                border-radius: 8px;
-                text-align: left;
-                position: relative;
-            }
-
-            .timeline-event.left .content::after,
-            .timeline-event.right .content::after {
-                /* max-width: 45%;
-                background: #d2d8a7cc;
-                padding: 1rem 1.2rem;
-                border-radius: 8px;
-                text-align: left;
-                position: relative; */
-                content: none;
-            }
+            /* 
+                .timeline-container::before {
+                    /* left: 10;
+                    width: 3px; */
+            /* display: none; */
         }
+
+        .timeline-event {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding-left: 20px;
+            /* offset to match the line */
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-left: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .timeline-content p {
+            margin: 0;
+            line-height: 1.6;
+            color: #555;
+            flex: 1;
+        }
+
+        /* 标题样式 */
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 描述文本 */
+        .timeline-content p {
+            margin: 0;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .timeline-event.left,
+        .timeline-event.right {
+            justify-content: flex-start !important;
+        }
+
+        .timeline-event .content {
+            max-width: 100% !important;
+            background: #d2d8a7cc;
+            padding: 1.2rem 1.5rem;
+            margin: 0;
+            border-radius: 8px;
+            text-align: left;
+            position: relative;
+        }
+
+        .timeline-event.left .content::after,
+        .timeline-event.right .content::after {
+            /* max-width: 45%;
+                    background: #d2d8a7cc;
+                    padding: 1rem 1.2rem;
+                    border-radius: 8px;
+                    text-align: left;
+                    position: relative; */
+            content: none;
+        }
+
 
         footer {
             background-color: #353535;
@@ -321,6 +338,135 @@
             text-align: center;
             /* font-size: 0.9rem; */
             color: #666;
+        }
+
+        /* Team Section Styles */
+        .team-section {
+            padding: 5rem 0;
+        }
+
+        .team-section h2 {
+            color: #4b752a;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-section .lead {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .circular-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #e2e7cf;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .circular-img:hover {
+            transform: scale(1.05);
+        }
+
+        .circular-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            border-top: 4px solid #8fcf53;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-info h4 {
+            color: #333;
+            font-size: 1.3rem;
+        }
+
+        .team-info h5 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .team-description p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Equal height columns */
+        .team-member {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1200px) {
+            .team-info {
+                min-height: 340px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .circular-img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .team-info {
+                min-height: 320px;
+            }
+
+            .team-info h4 {
+                font-size: 1.2rem;
+            }
+
+            .team-info h5 {
+                font-size: 0.9rem;
+            }
+
+            .team-description p {
+                font-size: 0.82rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .circular-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .team-info {
+                min-height: 300px;
+            }
+
+            .team-description p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .circular-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .team-info {
+                min-height: 280px;
+            }
         }
     </style>
 </head>
@@ -339,6 +485,8 @@
                     <li class="nav-item"><a class="nav-link" href="/index.html">主页</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">关于我们</a></li>
                     <li class="nav-item"><a class="nav-link" href="initiatives.html">新倡议</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">新闻</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="join.html">加入我们</a></li>
 
                     <li class="nav-item dropdown">
@@ -401,43 +549,191 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Team Section -->
+    <section class="team-section py-5" style="background-color: #f9faf5;">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold">Our Team</h2>
+                    <p class="lead">Meet the dedicated individuals driving our mission forward</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Team Member 1 - Alfred -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="/images/team-alfred.jpg" alt="Alfred" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Alfred Li</h4>
+                                <h5 class="text-success mb-2">Founder & Executive Director, YESAction China</h5>
+                                <h5 class="text-success mb-2">Alfred@yesaction.org</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Alfred，YESAction
+                                    中国区创始人与执行主任。他对环境可持续发展的关注源于多次参与自然与社区的实践，包括湿地研究与公益服务等经历，也因长期热爱徒步而更加体会到自然生态的价值。这些体验促使他投身推动青年参与可持续行动。在公益方面，Alfred
+                                    关注流浪动物救助与阿尔茨海默症群体关怀，希望以持续的实际行动为社区带来积极影响。
+
+                                    在 YESAction，他的使命是支持中国区青年开展本地环保项目，共同推动更可持续的未来。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 - Pranav (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Pranav&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Pranav Tholeti" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Pranav Tholeti</h4>
+                                <h5 class="text-success mb-2">Executive Director</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Pranav is the National Initiative Director for YES Education and a team member at
+                                    YES
+                                    Action's social media division. Attending high school in New Jersey, he founded his
+                                    school's environmental club and leads a local YESAction chapter, promoting
+                                    sustainability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 - Keely (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Keely&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Keely Aguilar" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Keely Aguilar</h4>
+                                <h5 class="text-success mb-2">Executive Assistant</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Keely, the Executive Assistant of YESAction's National Team and a freshman chapter
+                                    leader, passionately champions sustainable policies. Collaborating with local firms
+                                    to
+                                    elevate environmental standards, she conducts advanced research aimed at forging a
+                                    sustainable future.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 - Iryna (Placeholder) -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="team-member text-center h-100">
+                        <div class="team-img-wrapper mb-4">
+                            <div class="circular-img mx-auto">
+                                <img src="https://ui-avatars.com/api/?name=Iryna&background=8fcf53&color=fff&size=180&bold=true"
+                                    alt="Iryna Levada" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="team-info bg-white p-4 rounded shadow-sm h-100 d-flex flex-column">
+                            <div class="mb-3">
+                                <h4 class="fw-bold mb-1">Iryna Levada</h4>
+                                <h5 class="text-success mb-2">Director of Business Development</h5>
+                            </div>
+                            <div class="team-description flex-grow-1">
+                                <p class="text-muted mb-0">
+                                    Iryna, the Director of Business Development for YESAction and a senior at Altoona
+                                    High
+                                    School in WI, also leads the local YESAction chapter. As an exchange student from
+                                    Ukraine, she passionately shares her nation's heritage and culture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more team members here as needed -->
+            </div>
+        </div>
+    </section>
+
     <div class="timeline-container">
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2020–2021</div>
+        <div class="timeline-event">
+            <div class="timeline-year">2020-2021</div>
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="../images/timeline-2020-2021.jpg" alt="YESAction early research and foundation">
+                </div>
                 <p>这一时期以深入调研、活动宣传及基础架构建设为特征。我们启动了首个倡议项目，开展倡导可持续生活方式的宣传活动。至2021年，YESAction已在全国设立首批10个分部。</p>
+
             </div>
         </div>
 
-        <div class="timeline-event right">
-            <div class="content">
-                <div class="timeline-year">2021–2022</div>
+        <div class="timeline-event">
+            <div class="timeline-year">2021-2022</div>
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="../images/timeline-2020-2021.jpg" alt="YESAction early research and foundation">
+                </div>
                 <p>在奠基之年，当世界正与疫情抗争之际，一个深刻的认知悄然萌芽。我们选择聚焦中国应对危机的集体行动，YESAction于2021年9月正式诞生，首个分部由此成立。</p>
+
             </div>
         </div>
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2021–2022</div>
+
+        <div class="timeline-event">
+            <div class="timeline-year">2021-2022</div>
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="../images/timeline-2020-2021.jpg" alt="YESAction early research and foundation">
+                </div>
                 <p>我们的努力取得了显著成效，分部网络扩展至18个以上。为应对多元化的全球性议题，我们启动并实施了“YESEducation”、“YESHabits”
                     和“YESWater”等专项行动。</p>
             </div>
         </div>
 
-        <div class="timeline-event right">
-            <div class="content">
-                <div class="timeline-year">2023–至今</div>
+        <div class="timeline-event">
+            <div class="timeline-year">2023-2025</div>
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="../images/timeline-2020-2021.jpg" alt="YESAction early research and foundation">
+                </div>
                 <p>我们的旅程持续向上发展，全球网络已扩展至超过70个分部。我们推出了新的倡议项目，例如
                     YESCooking，通过烹饪实践来推广可持续厨房的理念。凭借持续不断的创新浪潮，我们始终致力于创造并推出更多具有深远影响的倡议。</p>
             </div>
         </div>
 
-        <div class="timeline-event left">
-            <div class="content">
-                <div class="timeline-year">2025年：拓展至中国</div>
-                <p>我们成立了 YESAction China（中国分部），这一重要举措让我们的倡议更贴近本地社区。中国分部致力于推动青年参与、可持续创新以及跨文化合作，共同践行 YESAction 的全球愿景。</p>
+        <div class="timeline-event">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="../images/timeline-2020-2021.jpg" alt="YESAction early research and foundation">
+                </div>
+                <p>我们成立了 YESAction China（中国分部），这一重要举措让我们的倡议更贴近本地社区。中国分部致力于推动青年参与、可持续创新以及跨文化合作，共同践行 YESAction 的全球愿景。
+                </p>
+
             </div>
         </div>
     </div>
+
+
+
 
 
 

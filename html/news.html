@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YESCooking | YESACTION</title>
+    <title>News | YESACTION</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -37,6 +37,8 @@
             color: #333;
             padding-top: 80px;
             margin: 0;
+            height: 100%;
+
 
         }
 
@@ -84,47 +86,7 @@
             font-size: clamp(0.8rem, 0.8vw + 0.2rem, 0.9rem);
         }
 
-        .cook-hero {
-            background-image: url('../images/cooking-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            min-height: 90vh;
-            /* 90% of viewport height */
-            padding: 4rem 2rem;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
 
-        .cook-hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
-
-        .cook-hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-            text-align: left;
-            padding-top: 10rem;
-        }
-
-        .cook-hero h1 {
-            /* font-size: 3rem; */
-            font-weight: 700;
-        }
-
-        .cook-hero h2 {
-            /* font-size: 1.25rem; */
-            font-weight: 400;
-            font-style: italic;
-            margin-top: 1rem;
-            color: #ffd;
-        }
 
         .section {
             padding: 4rem 2rem;
@@ -166,30 +128,31 @@
     </style>
 </head>
 
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand text-success" href="/index-en.html">YESACTION</a>
+            <a class="navbar-brand text-success" href="/index.html">YESACTION</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index-en.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about-en.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="initiatives-en.html">Initiatives</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news-en.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">主页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="initiatives.html">新倡议</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">新闻</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="join-en.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="join.html">加入我们</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="yescooking.html" id="languageDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="news.html" id="languageDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">中文</a>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="yescooking-en.html">English</a></li>
+                            <li><a class="dropdown-item" href="news-en.html">English</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -197,115 +160,46 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="cook-hero">
-        <div class="container">
-
-            <div class="cook-hero-content text-white">
-                <h1><span class="text-warning">YES</span><strong>Cooking</strong></h1>
-                <h2>Discover the Joy of Home-Cooking with YESCooking!</h2>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Section: Who is YESCooking -->
-    <section class="section bg-light">
-        <div class="container">
-            <h3>Who is <span class="highlight">YESCooking</span>?</h3>
-            <p>
-                YESCooking is a proud initiative of YESAction. Our focus? To champion the many benefits of cooking at
-                home.
-                While grabbing a fast food meal might seem like the easiest choice, trust us, whipping up a home-cooked
-                dish can be just as effortless.
-                Plus, it comes with added benefits like health and sustainability.
-            </p>
-        </div>
-    </section>
-
-    <!-- Section: Benefits of Home Cooking -->
-    <section class="section">
-        <div class="container">
-            <h3>The Magic of Home-Cooked Meals</h3>
-            <p>
-                When you opt for fast food, you inadvertently contribute to the colossal waste produced annually,
-                not to mention most choices are laden with grease.
-                In contrast, cooking at home gives you the power of choice. Decide your portions, pick fresh
-                ingredients,
-                and tailor your meals to your liking.
-                Not only does home-cooking consume less energy and packaging, but it also fosters lifelong habits.
-                Embrace cooking early on and discover treasured recipes and experiences that will stay with you.
-            </p>
-            <p>
-                Beyond just a task, cooking can be a communal activity, a self-improvement tool, and a deep-seated
-                passion.
-                So, why not embark on this flavorful journey of transformation with us?
-            </p>
-        </div>
-    </section>
-
-    <!-- Section: Stay Connected -->
-    <section class="section bg-light">
-        <div class="container">
-            <h3>Stay Connected with <span class="highlight">YESCooking</span></h3>
-            <p>
-                For those eager to dive deeper, our blog is a treasure trove. From handy tips to dodge fast food
-                cravings,
-                to insightful reads on its health and environmental repercussions, and a collection of simple yet
-                delectable recipes,
-                we’ve got you covered.
-            </p>
-            <p>
-                And for our visual enthusiasts, our Instagram is bursting with infographics on the fast food vs.
-                home-cooked debate.
-                Plus, stay tuned for engaging video tutorials on easy-to-make dishes!
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section py-5" style="background-color: #e2e7cf;">
+    <!-- Summer Sustainability Program Section -->
+    <section class="sustainability-program py-5" style="background-color: #f0f4e1;min-height: 80vh;">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Image -->
-                <div class="col-md-6 text-center mb-4 mb-md-0 d-none d-md-block">
+                <!-- Text Content -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4">
+                        <span class="d-block">YESAction 可持续回顾:</span>
+                        <!-- <span class="d-block">YESAction 2025 Sustainable Leadership Training Program</span> -->
+                    </h2>
 
-                    <img src="../images/contact-image.jpg" alt="Contact YESAction" class="img-fluid rounded" />
+                    <p class="lead mb-4">
+                        YESAction 2025年可持续领导力培训计划 今年夏秋，我们先后举办了两期 YESAction
+                        可持续领导力培训课程。整个社区充满了热情、创造力与创新精神。随着夏季结束、新学年开启，让我们回顾项目的成果，并为正在成长中的可持续发展新生代喝彩。
+                    <div class="d-flex align-items-center">
+                        <a href="/html/sltpreadmore.html" class="btn btn-success btn-lg rounded-pill px-4 py-3 me-4">
+                            阅读更多 <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                        <!-- Optional: Add featured names like in the image -->
+                        <!-- <div class="featured-names">
+                                <p class="mb-0 text-muted"><strong>Featured Participants:</strong></p>
+                                <p class="mb-0">Folate Escots • Isabelle Rapp</p>
+                            </div> -->
+                    </div>
                 </div>
 
-                <!-- Form -->
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-3">Ready to <em>Connect?</em></h2>
-                    <form id="contact-form">
-                        <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="First name" name="FirstName"
-                                    required />
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name" name="LastName"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email *" name="Email" required />
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Subject *" name="Subject" required />
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Message *" name="Message"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark px-4 py-2 rounded-pill">Let's Talk</button>
-                    </form>
+                <!-- Image -->
+                <div class="col-lg-6">
+                    <div class="program-image-wrapper rounded overflow-hidden shadow-lg">
+                        <img src="../images/summer-program.jpg" alt="YESAction Summer Leadership Training Program"
+                            class="img-fluid w-100">
+                        <!-- <div class="image-caption p-3" style="background-color: rgba(0,0,0,0.7); color: white;">
+                                <p class="mb-0">Participants at the 2023 YESAction Leadership Training Program</p>
+                            </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="text-white py-4">
         <div class="container">
             <div class="row">

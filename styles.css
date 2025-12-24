@@ -22,6 +22,22 @@ body {
     color: #222;
 }
 
+@media (max-width: 992px) {
+    .logo-img {
+        height: 40px;
+    }
+
+    .brand-text {
+        font-size: 1.25rem !important;
+    }
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
 /* Headings */
 h1 {
     font-size: clamp(3rem, 5vw, 4rem);
@@ -116,7 +132,8 @@ nav.navbar {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
+    padding: 1rem 2rem 1rem 0;
     background-color: transparent !important;
     background-color: rgba(255, 255, 255, 0.6) !important;
     /* Soft white background */

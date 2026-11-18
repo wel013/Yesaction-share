@@ -338,37 +338,37 @@ const locations = [
     {
         name: "温州森马协和国际学校", 
         lat: 27.948475453278526, 
-        long: 120.61845548641101, 
+        lng: 120.61845548641101, 
         url:"https://wenzhou-en.suis.com.cn/"
     }, 
     {
         name: "上海新纪元双语学校", 
         url :"https://www.shnebs.com/", 
         lat: 31.567689238326892, 
-        long: 121.79112035168215
+        lng: 121.79112035168215
     }, 
     {
         name: "Suzhou foreign language school", 
         url: "https://www.sfls.com.cn/", 
         lat: 31.278171041903054, 
-        long: 120.54318926798857
+        lng: 120.54318926798857
     }, 
     {
         name: "上海光华学院剑桥国际中心",
         lat: 31.286681335430043, 
-        long: 121.53054018333177,
+        lng: 121.53054018333177,
         url: "https://en.ghcis.com/"
     },
     {
         name: "上海青浦区世外高级中学", 
         url: "https://qphs.shwfl.edu.cn/main.htm", 
         lat: 31.19108462607484, 
-        long: 121.28178784207095
+        lng: 121.28178784207095
     },
     {
         name: "温州世外高级中学", 
         url: "https://wz.shwfl.edu.cn/", 
-        long: 120.803947,
+        lng: 120.803947,
         lat: 27.943312
     }
 
